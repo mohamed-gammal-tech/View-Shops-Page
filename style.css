@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --body-color: #white;
+  --nav-color: #0f0f29;
+  --side-nav: #010718;
+  --search-bar: #f2f2f2;
+  --search-text: #010718;
+  --dark-shadeblue: #1c1c44;
+  --medium-shadeblue: #33337c;
+  --light-shadeblue: #4a4ab3;
+  --dark-tintblue: #5757ba;
+  --medium-tintblue: #9c9cd6;
+  --light-tintblue: #e2e2f3;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main {
+  width: 85%;
+  margin: 0 auto;
+}
+.container {
+  width: 85%;
+  margin: 20px auto;
+}
+.title {
+  margin-bottom: 40px;
+}
+.title h3 {
+  font-family: "Arial", sans-serif; /* You can choose any font you like */
+  font-size: 32px; /* Adjust size as needed */
+  color: #000; /* This is black; change as you prefer */
+  text-align: center; /* Centers the text horizontally */
+  position: relative;
+  padding-bottom: 10px; /* Space for the underline */
+}
+
+.title h3::before {
+  content: "";
+  display: block;
+  width: calc(
+    100% - 20px
+  ); /* Adjust the width as needed, this will make the line width as the text if you add enough padding */
+  height: 2px; /* Thickness of the underline */
+  background: lightgray; /* This is black; change as you prefer */
+  margin: 0 auto; /* This will center the underline */
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the title */
+  left: 10px; /* Half of the total padding */
+  right: 10px; /* Half of the total padding */
+  border-radius: 2px; /* Optional: adds rounded corners to the underline */
+}
+
+.title h3::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  background: var(--dark-shadeblue);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ------------------------------------------------ */
+
+.shops {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* --------------------------------------------   */
+.shop-card {
+  flex: 1 0 18%; 
+  max-width: 220px; 
+  height: auto; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: white; 
+}
+
+.cover-photo {
+  height: 275px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px; 
+  border-radius: 50%; 
+  overflow: hidden;
+  position: absolute;
+  top: 67%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  border: 3px solid whitesmoke; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: white; 
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.shop-info {
+  padding: 40px 10px 10px; 
+}
+
+.shop-info h3 {
+  margin-bottom: 5px; 
+  font-size: 1.5em; 
+  color: var(--dark-shadeblue);
+}
+
+.follow-btn {
+  background-color: var(--nav-color);
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px; 
+}
+
+.follow-btn:hover {
+  background-color: #fff;
+  border: 1px solid var(--nav-color);
+  color: var(--nav-color);
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 20px;
+
+  font-weight: 600;
+  margin-top: 8px; 
+}
+
+@media (max-width: 760px){
+    .shops{
+        margin-left: 35px;
+    }
+}
+@media (max-width: 400px){
+  .profile-photo {
+    width: 60px;
+    height: 60px; 
+    top: 61%; 
+  }
+  
+}
